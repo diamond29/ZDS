@@ -1,0 +1,68 @@
+POST /assignment/assign HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "drivers": [
+    {
+      "id": 1,
+      "location": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "id": 2,
+      "location": {
+        "x": 5,
+        "y": 5
+      }
+    },
+    {
+      "id": 3,
+      "location": {
+        "x": 10,
+        "y": 10
+      }
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "destination": {
+        "x": 2,
+        "y": 4
+      },
+      "size": "small | large"
+    },
+    {
+      "id": 2,
+      "origin": {
+        "x": 1,
+        "y": 3
+      },
+      "destination": {
+        "x": 10,
+        "y": 10
+      },
+      "size": "small | large"
+    },
+    {
+      "id": 3,
+      "origin": {
+        "x": 99,
+        "y": 99
+      },
+      "destination": {
+        "x": 0,
+        "y": 0
+      },
+      "size": "small | large"
+    }
+  ]
+}
