@@ -1,0 +1,51 @@
+// No Drivers Supplied
+{
+  "drivers": [],
+  "orders": [{
+    "id": 1,
+    "origin": {
+      "x": 0,
+      "y": 0
+    },
+    "destination": {
+      "x": 2,
+      "y": 4
+    },
+    "size": "large"
+  }]
+}
+
+// No Eligible Drivers
+{
+  "drivers": [{
+    "id": 1,
+    "location": {
+      "x": 0,
+      "y": 0
+    },
+    "orders": [{
+      "id": 2,
+      "origin": {
+        "x": 0,
+        "y": 0
+      },
+      "destination": {
+        "x": 0,
+        "y": 0
+      },
+      "size": "large"
+    }]
+  }],
+  "orders": [{
+    "id": 1,
+    "origin": {
+      "x": 0,
+      "y": 0
+    },
+    "destination": {
+      "x": 2,
+      "y": 4
+    },
+    "size": "large"
+  }]
+}

@@ -10,7 +10,33 @@ Cache-Control: no-cache
       "location": {
         "x": 0,
         "y": 0
-      }
+      },
+      "orders": [
+        {
+          "id": 43,
+          "origin": {
+            "x": 0,
+            "y": 0
+          },
+          "destination": {
+            "x": 1,
+            "y": 1
+          },
+          "size": "large"
+        },
+        {
+          "id": 42,
+          "origin": {
+            "x": 0,
+            "y": 0
+          },
+          "destination": {
+            "x": 1,
+            "y": 1
+          },
+          "size": "small"
+        }
+      ]
     },
     {
       "id": 2,
@@ -38,7 +64,7 @@ Cache-Control: no-cache
         "x": 2,
         "y": 4
       },
-      "size": "small | large"
+      "size": "large"
     },
     {
       "id": 2,
@@ -50,7 +76,7 @@ Cache-Control: no-cache
         "x": 10,
         "y": 10
       },
-      "size": "small | large"
+      "size": "small"
     },
     {
       "id": 3,
@@ -62,7 +88,7 @@ Cache-Control: no-cache
         "x": 0,
         "y": 0
       },
-      "size": "small | large"
+      "size": "small"
     }
   ]
 }
