@@ -1,4 +1,4 @@
-require_relative "../../lib/assignment.rb"
+require_relative "../../lib/assigner.rb"
 require 'json'
 require 'ostruct'
 require 'stringio'
@@ -13,13 +13,14 @@ class AssignmentController < ApplicationController
     drivers = postObj.drivers
     orders = postObj.orders
 
-# Temp test
+    assigner = Assigner.new(drivers, orders)
+    result = assigner.Assign
+
     s = StringIO.new
-    s << "Number of drivers: #{drivers.size}\n"
-    s << "Number of orders: #{orders.size}\n"
+    s << result.to_json
     render :plain => s.string
 
-#    assigner = Assigner.new('Drivers', 'Orders')
+
 #    render :plain => assigner.Assign
   end
 end
