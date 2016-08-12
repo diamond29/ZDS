@@ -43,7 +43,7 @@ Things that when well:
 - Took only a few hours for solution
 
 Things I'd like to improve:
-- Made time tradeoff, I chose greedy assignment algorithm over more effiecent solutions. Would have liked to at least try a spin on bin-packing.
+- Made time tradeoff, I chose greedy assignment algorithm over more efficient solutions. Would have liked to at least try a spin on bin-packing.
 - Would like to look for automated testing tool.
 - Would like to take a second pass at code as I become more familiar with Ruby, skipped on revisiting code smells such as using `== "large"` order size comparisons in many places. Also I have a feeling I could have taken more advantage of rubys syntax to simplify some of the code.
 - Spent more time on troubleshooting installing tech on Windows than expected
