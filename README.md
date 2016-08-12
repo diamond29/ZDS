@@ -21,6 +21,14 @@ Assuming ruby and rails installed...
 3. Visit [localhost:3000](http://localhost:3000/) to confirm server running.
 4. Use Postman or an equivalent tool to test service, see __TestingData folder for Http Post params and a few sample test objects.
 
+## Key Pieces
+
+- `__TestingData` Folder containing expected data format and test objects
+- `app\controllers\assignment_controller.rb` Controller for the service
+- `lib\` Folder for assignment releated classes
+- `config\routes.rb` Routing config
+
+
 ## Assumptions Made
 1. Incoming data format, see __TestingData examples
 2. Used simple 2D locations & distance algorithm to keep problem simple. E.g. (0,0) and (0,5) are 5 miles apart.
