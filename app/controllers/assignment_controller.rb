@@ -1,7 +1,6 @@
 require_relative "../../lib/assigner.rb"
 require 'json'
 require 'ostruct'
-require 'stringio'
 
 class AssignmentController < ApplicationController
   def about

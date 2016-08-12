@@ -2,7 +2,7 @@
 # Driver 1 shouldn't be assigned any, has a large order already
 # Driver 2 shouldn't be assigned any, too far away
 # Driver 3 should be assigned orders 1,2,3 as he is empty, they are all small, and in range
-# Driver 4 should be assigned orders 4,5 as he is empty, 4 is small but then 5 is larger, and all in range
+# Driver 4 should be assigned orders 4,5 as he is empty, 4 is small but then 5 is large, and all in range
 # Driver 5 should be assigned 6 and 8, as he is empty, they are small, but 7 is not in range
 {
   "drivers" : [{
