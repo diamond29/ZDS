@@ -16,11 +16,6 @@ class AssignmentController < ApplicationController
     assigner = Assigner.new(drivers, orders)
     result = assigner.Assign
 
-    s = StringIO.new
-    s << result.to_json
-    render :plain => s.string
-
-
-#    render :plain => assigner.Assign
+    render :json => result
   end
 end

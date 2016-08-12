@@ -1,0 +1,44 @@
+# Driver 0 shouldn't be assigned any, has 3 orders already
+# Driver 1 shouldn't be assigned any, has a large order already
+# Driver 2 shouldn't be assigned any, too far away
+# Driver 3 should be assigned orders 1,2,3 as he is empty, they are all small, and in range
+# Driver 4 should be assigned orders 4,5 as he is empty, 4 is small but then 5 is larger, and all in range
+# Driver 5 should be assigned 6 and 8, as he is empty, they are small, but 7 is not in range
+{
+  "drivers" : [{
+      "id": 0,
+      "location" : { "x": 0, "y": 0 },
+      "orders": [
+        { "id": 40, "size": "small"},
+        { "id": 41, "size": "small"},
+        { "id": 42, "size": "small"}
+    ]},{
+      "id": 1,
+      "location" : { "x": 0, "y": 0 },
+      "orders": [
+        { "id": 43, "size": "large"}
+    ]}, {
+      "id": 2,
+      "location" : { "x": 10, "y": 10 }
+    }, {
+      "id": 3,
+      "location": { "x": 0, "y": 0 }
+    }, {
+      "id": 4,
+      "location": { "x": 0, "y": 0 }
+    }, {
+      "id": 5,
+      "location": { "x": 0, "y": 0 }
+    }
+  ],
+  "orders" : [
+  { "id": 1, "origin": {"x": 0, "y": 0}, "destination": {"x": 1, "y": 1}, "size": "small"},
+  { "id": 2, "origin": {"x": 0, "y": 0}, "destination": {"x": 1, "y": 1}, "size": "small"},
+  { "id": 3, "origin": {"x": 0, "y": 0}, "destination": {"x": 1, "y": 1}, "size": "small"},
+  { "id": 4, "origin": {"x": 0, "y": 0}, "destination": {"x": 1, "y": 1}, "size": "small"},
+  { "id": 5, "origin": {"x": 0, "y": 0}, "destination": {"x": 1, "y": 1}, "size": "large"},
+  { "id": 6, "origin": {"x": 0, "y": 0}, "destination": {"x": 1, "y": 1}, "size": "small"},
+  { "id": 7, "origin": {"x": 5, "y": 5}, "destination": {"x": 1, "y": 1}, "size": "small"},
+  { "id": 8, "origin": {"x": 0, "y": 0}, "destination": {"x": 1, "y": 1}, "size": "small"}
+  ]
+}

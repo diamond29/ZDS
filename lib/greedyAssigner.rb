@@ -31,10 +31,12 @@ class GreedyAssigner
         end
       end
 
-      assignments.push(Assignment.new(driver.id, ordersForDriver))
+      if (ordersForDriver.size > 0)
+        assignments.push(Assignment.new(driver.id, ordersForDriver))
+      end
     end
 
-    AssignmentResult.new(assignments, remainingOrders)
+    AssignmentResult.new(assignments, remainingOrders.map {|o| o.id})
   end
 
   def IsEligibleOrder(driver, order)

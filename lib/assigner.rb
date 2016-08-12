@@ -11,14 +11,14 @@ class Assigner
     eligibleDrivers = @drivers.select  { |d| IsEligibleDriver(d) }
 
     if eligibleDrivers.size == 0 || @orders.size == 0
-      return AssignmentResult.new([], @orders)
+      return AssignmentResult.new([], @orders.map {|o| o.id})
     end
 
-    assigner = GreedyAssigner.new(@drivers, @orders)
+    assigner = GreedyAssigner.new(eligibleDrivers, @orders)
     assigner.Assign
   end
 
   def IsEligibleDriver(driver)
-    driver.orders == nil || (driver.orders.size < 3 && !driver.orders.any? { |order| order.size == "large" })
+    driver.orders == nil || (driver.orders.size < 3 && (!(driver.orders.any? { |order| order.size == "large" })))
   end
 end
