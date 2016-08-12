@@ -1,4 +1,5 @@
 require "AssignmentResult.rb"
+require "GreedyAssigner.rb"
 
 class Assigner
   def initialize(drivers, orders)
@@ -9,11 +10,12 @@ class Assigner
   def Assign
     eligibleDrivers = @drivers.select  { |d| IsEligibleDriver(d) }
 
-    if eligibleDrivers.size == 0
+    if eligibleDrivers.size == 0 || @orders.size == 0
       return AssignmentResult.new([], @orders)
     end
 
-    return AssignmentResult.new([], nil)
+    assigner = GreedyAssigner.new(@drivers, @orders)
+    assigner.Assign
   end
 
   def IsEligibleDriver(driver)
